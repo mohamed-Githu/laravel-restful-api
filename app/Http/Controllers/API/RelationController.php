@@ -12,16 +12,16 @@ class RelationController extends Controller
 {
     public function userLessons($id)
     {
-        return User::find($id)->lessons;
+        return User::findOrFail($id)->lessons;
     }
 
     public function lessonTags($id)
     {
-        return Lesson::find($id)->tags;
+        return Lesson::findOrFail($id)->tags;
     }
 
     public function tagLessons($id)
     {
-        return Tag::find($id)->lessons;
+        return Tag::findOrFail($id)->lessons;
     }
 }
